@@ -13,7 +13,7 @@
 body {
 	font-family: "Karla", sans-serif;
 	max-width: 1445px;
-	padding: 10% 25%;
+	padding: 8% 25%;
 	font-size: 16px;
 	background-color: var(--neutral-light-grey);
 	color: var(--neutral-grayish-blue);
@@ -42,6 +42,22 @@ div > .brigth-yellow {
 	font-size: 36px;
 }
 
+.btn {
+	width: 100%;
+	background-color: var(--primary-bright-yellow);
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.5);
+}
+
 /* .grid-container > div {
 	border: 1px solid black;
 	border-radius: 100px;
@@ -54,12 +70,13 @@ div > .brigth-yellow {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-auto-rows: auto;
+	box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.5);
 }
 
 .header,
 .subscription,
 .info {
-	padding: 30px 20% 30px 35px;
+	padding: 30px 60px;
 }
 
 .header {
@@ -86,6 +103,7 @@ div > .brigth-yellow {
 @media screen and (max-width: 980px) {
 	body {
 		padding: 10% 10%;
+		text-align: center;
 	}
 	.header {
 		grid-column: span 12;
@@ -95,6 +113,9 @@ div > .brigth-yellow {
 		grid-column: span 12;
 		border-bottom-left-radius: 0px;
 	}
+	.subscription .btn {
+		width: 100%;
+	}
 
 	.info {
 		grid-column: span 12;
@@ -102,8 +123,12 @@ div > .brigth-yellow {
 	}
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 	body {
 		padding: 10% 5%;
+		text-align: left;
+	}
+	.subscription .btn {
+		width: 100%;
 	}
 }
