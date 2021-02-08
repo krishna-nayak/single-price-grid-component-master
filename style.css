@@ -1,126 +1,139 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 * {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 :root {
-	--primary-cyan: hsl(179, 62%, 43%);
-	--primary-light-cyan: hsl(179, 70%, 45%);
-	--primary-bright-yellow: hsl(71, 73%, 54%);
-	--neutral-grayish-blue: hsl(218, 22%, 67%);
-	--neutral-light-grey: hsl(204, 43%, 93%);
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-light-cyan: hsl(179, 70%, 45%);
+    --primary-bright-yellow: hsl(71, 73%, 54%);
+    --neutral-grayish-blue: hsl(218, 22%, 67%);
+    --neutral-light-grey: hsl(204, 43%, 93%);
 }
 body {
-	font-family: "Karla", sans-serif;
-	max-width: 1445px;
-	padding: 8% 25%;
-	font-size: 16px;
-	background-color: var(--neutral-light-grey);
-	color: var(--neutral-grayish-blue);
+    font-family: "Karla", sans-serif;
+    max-width: 1440px;
+    min-height: 100vh;
+    font-size: 1.25rem;
+    background-color: var(--neutral-light-grey);
+    color: var(--neutral-grayish-blue);
+    position: relative;
 }
 
 h2,
 h3 {
-	margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 p {
-	line-height: 1.5;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    width: 50vw;
+    box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    /* bug need to fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .heading {
-	color: var(--primary-cyan);
+    color: var(--primary-cyan);
+    font-size: 1.6rem;
 }
-.brigth-yellow {
-	color: var(--primary-bright-yellow);
-}
-div > .brigth-yellow {
-	margin-bottom: 15px;
+
+.header .brigth-yellow {
+    color: var(--primary-bright-yellow);
+    margin-bottom: 5px;
 }
 
 .text-large {
-	font-weight: 700;
-	font-size: 36px;
+    font-weight: 700;
+    font-size: 2.25rem;
 }
 
 .btn {
-	width: 100%;
-	background-color: var(--primary-bright-yellow);
-	border: none;
-	border-radius: 5px;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.5);
-}
-
-.grid-container {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-auto-rows: auto;
-	box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    background-color: var(--primary-bright-yellow);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.5);
 }
 
 .header,
 .subscription,
 .info {
-	padding: 30px 60px;
+    padding: 30px 60px;
 }
 
 .header {
-	grid-column: span 12;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	background-color: white;
-	color: var(--neutral-grayish-blue);
+    grid-column: span 12;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white;
+    color: var(--neutral-grayish-blue);
 }
 
 .subscription {
-	grid-column: span 6;
-	border-bottom-left-radius: 5px;
-	background-color: var(--primary-cyan);
-	color: var(--neutral-light-grey);
+    grid-column: span 6;
+    border-bottom-left-radius: 5px;
+    background-color: var(--primary-cyan);
+    color: var(--neutral-light-grey);
 }
 
 .info {
-	grid-column: span 6;
-	border-bottom-right-radius: 5px;
-	background-color: var(--primary-light-cyan);
-	color: var(--neutral-light-grey);
+    grid-column: span 6;
+    border-bottom-right-radius: 5px;
+    background-color: var(--primary-light-cyan);
+    color: var(--neutral-light-grey);
 }
 @media screen and (max-width: 980px) {
-	body {
-		padding: 10% 10%;
-		text-align: center;
-	}
-	.header {
-		grid-column: span 12;
-	}
+    body {
+        padding: 10% 10%;
+        text-align: center;
+    }
+    .header {
+        grid-column: span 12;
+    }
 
-	.subscription {
-		grid-column: span 12;
-		border-bottom-left-radius: 0px;
-	}
-	.subscription .btn {
-		width: 100%;
-	}
+    .subscription {
+        grid-column: span 12;
+        border-bottom-left-radius: 0px;
+    }
+    .subscription .btn {
+        width: 100%;
+    }
 
-	.info {
-		grid-column: span 12;
-		border-bottom-left-radius: 5px;
-	}
+    .info {
+        grid-column: span 12;
+        border-bottom-left-radius: 5px;
+    }
 }
 
 @media screen and (max-width: 550px) {
-	body {
-		padding: 10% 5%;
-		text-align: left;
-	}
-	.subscription .btn {
-		width: 100%;
-	}
+    body {
+        padding: 10% 5%;
+        text-align: left;
+    }
+    .subscription .btn {
+        width: 100%;
+    }
 }
